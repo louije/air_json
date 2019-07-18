@@ -1,7 +1,17 @@
 {
-  "name": "airjson",
+  "name": "air_json",
   "version": "1.0.0",
-  "main": "index.js",
+  "author": "Louis-Jean Teitelbaum",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/louije/air_json"
+  },
+  "description": "Airtable API wrapper that fetches a whole table and its related entries in one go.",
+  "homepage": "https://github.com/louije/air_json",
+  "keywords": [
+    "airtable", "headless cms"
+  ],
+  "main": "air_json.js",
   "license": "MIT",
   "dependencies": {
     "airtable": "^0.6.0"

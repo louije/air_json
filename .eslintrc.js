@@ -15,10 +15,14 @@ module.exports = {
     ecmaVersion: 2018,
   },
   rules: {
-    "quotes": ["error", "double"],
+    "arrow-body-style": [0, "as-needed"],
     "class-methods-use-this": [0, false],
-    "prefer-arrow-callback": ["warn", { "allowNamedFunctions": true } ],
     "comma-dangle": ["error", { functions: "never" }],
-    "max-len": ["warn", 140]
+    "max-len": ["warn", 140],
+    "no-console": ["error", { allow: ["warn", "error"] }],
+    "no-return-assign": ["error", "except-parens"],
+    "no-underscore-dangle": [0, false],
+    "prefer-arrow-callback": ["warn", { "allowNamedFunctions": true } ],
+    "quotes": ["error", "double"]
   },
 };
