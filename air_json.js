@@ -79,7 +79,7 @@ class AirJSON {
         .eachPage(
           function page(records, fetchNextPage) {
             records.forEach((row) => {
-              rows.push(self._handleRow(row.fields));
+              rows.push(self._handleRow(row));
               self._hasFetched(row.id, row.fields);
             });
             fetchNextPage();
@@ -102,17 +102,19 @@ class AirJSON {
 
   _handleRow(row) {
     const data = {};
-    Object.keys(row).forEach((k) => {
-      if (this._isRelationship(k, row[k])) {
-        row[k].forEach(v => this.recordsQueue.add(v));
+    const { fields, id } = row;
+    data._id = id;
+    Object.keys(fields).forEach((k) => {
+      if (this._isRelationship(k, fields[k])) {
+        fields[k].forEach(v => this.recordsQueue.add(v));
       }
-      data[k] = row[k];
+      data[k] = fields[k];
     });
     return data;
   }
 
   _hasFetched(rowID, row) {
-    this.fetchedRecords[rowID] = row;
+    this.fetchedRecords[rowID] = { _id: rowID, ...row };
     this.recordsQueue.delete(rowID);
   }
 
