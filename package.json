@@ -14,7 +14,7 @@
   "main": "air_json.js",
   "license": "MIT",
   "dependencies": {
-    "airtable": "^0.6.0"
+    "airtable": "^0.7.2"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
