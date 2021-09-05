@@ -1,6 +1,6 @@
 {
   "name": "air_json",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Louis-Jean Teitelbaum",
   "repository": {
     "type": "git",
@@ -9,16 +9,17 @@
   "description": "Airtable API wrapper that fetches a whole table and its related entries in one go.",
   "homepage": "https://github.com/louije/air_json",
   "keywords": [
-    "airtable", "headless cms"
+    "airtable",
+    "headless cms"
   ],
   "main": "air_json.js",
   "license": "MIT",
   "dependencies": {
-    "airtable": "^0.6.0"
+    "airtable": "^0.11.1"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.18.0"
   }
 }
